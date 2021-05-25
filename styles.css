@@ -1,0 +1,28 @@
+#snakeGameContainer {
+    height: 500px;
+    width: 300px;
+    margin: auto;
+    background-color: #000;
+}
+#score {
+    height: 15%;
+    background-color: #f00;
+}
+#gameField {
+    width: 90%;
+    height: 75%;
+    margin: 5% auto;
+    background-color: #0f0;
+}
+.square {
+    float: left;
+    height: 18px;
+    width: 18px;
+    background-color: #00f;
+}
+.apple {
+    background-color: #f00;
+}
+.snake {
+    background-color: #000;
+}
