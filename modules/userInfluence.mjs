@@ -1,5 +1,7 @@
 let xAndYValue = {x:0,y:0};
 let lastXAndYValue = {x:0, y:0};
+
+// Function which change snake movement directory
 window.addEventListener("keydown", (event) => {
     switch (event.key) {
         case "ArrowUp":
@@ -20,6 +22,8 @@ window.addEventListener("keydown", (event) => {
             break;
 }
 })
+
+// Function which return coords after update
 export const handleValueChange = () => {
     lastXAndYValue = xAndYValue;
     return xAndYValue;
