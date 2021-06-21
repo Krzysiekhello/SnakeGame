@@ -8,7 +8,7 @@ let gameOver = false;
 // Function which render application
 const main = (currentTime) => {
     if (gameOver) {
-        if (confirm("Lose, press Ok for next round")) {
+        if (confirm("You Lose, press 'Ok' for next round")) {
             window.location.reload();
         }
     }
@@ -32,6 +32,7 @@ const draw = () => {
     drawSnake(gameField);
     appleUpdate(gameField);
 }
+
 const update = () => {
     updateGame();
     updateAppleCoords();
