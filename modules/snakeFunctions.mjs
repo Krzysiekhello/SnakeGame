@@ -8,7 +8,6 @@ export const drawSnake = (gameField) => {
         const squareSnakeElement = document.createElement("div");
         squareSnakeElement.style.gridColumnStart = el.x;
         squareSnakeElement.style.gridRowStart = el.y;
-        squareSnakeElement.style.transition = "0.2s";
         squareSnakeElement.classList.add("snakeSquare");
         gameField.appendChild(squareSnakeElement);
     })

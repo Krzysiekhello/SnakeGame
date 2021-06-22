@@ -1,10 +1,14 @@
 html {
     overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #263238;
+    font-weight: 800;
 }
 #gameContainer {
+    position: relative;
     width: 90vh;
     margin: auto;
-    background-color: #80cbc4;
+    border-radius: 10px;
 }
 #gameField {
     width: 100%;
@@ -12,18 +16,71 @@ html {
     display: grid;
     grid-template-rows: repeat(30, 1fr);
     grid-template-columns: repeat(30, 1fr);
-    background-color: #004d40;
+    background-color: #2e7d32;
+    border-radius: 10px;
 }
 #gameScore {
     display: flex;
     justify-content: space-around;
+    background-color: #81c784;
+    border-radius: 10px;
+}
+#resultTable {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 20%;
+    border-radius: 10px;
+    background-color: #1b5e20;
+    z-index: 1;
+    transition: 0.5s;
+}
+#resultTable > p  {
+    text-align: center;
+    font-size: 25px;
+}
+#resultTable > div {
+    display: flex;
+    justify-content: space-around;
+    line-height: 10px;
+    font-size: 25px;
+}
+#resultTable > button {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background-color: #ff5722;
+    border-radius: 10px;
+    transition: 0.3s;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    color: #263238;
+    font-weight: 800;
+    font-size: 20px;
+}
+#resultTable > button:hover {
+   transform: scale(1.2);
 }
 .appleSquare {
     height: 19px;
     width: 19px;
+    background-image: url("png/apple.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.snakeSquare:first-child {
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 19px;
+    width: 19px;
     background-color: #f00;
 }
-.snakeSquare {
+.snakeSquare:not(.snakeSquare:first-child) {
     height: 19px;
     width: 19px;
     background-color: #afa;

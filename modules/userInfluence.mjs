@@ -1,9 +1,11 @@
 let xAndYValue = {x:0,y:0};
 let lastXAndYValue = {x:0, y:0};
-const timeElement = document.querySelector("[data-time='time'] > span");
 let firstUserMove = true;
-let timerInterval = null;
+export let timerInterval = null;
 let time = 0;
+const timeElement = document.querySelector("[data-time='time'] > span");
+
+
 // Function which change snake movement directory
 window.addEventListener("keydown", (event) => {
     switch (event.key) {
@@ -12,7 +14,7 @@ window.addEventListener("keydown", (event) => {
             xAndYValue = {x:0, y:-1};
             break;
         case "ArrowDown":
-            if (lastXAndYValue.y === -1) return;
+            // snakeHead[0].style.transform = 'rotate('+180+'deg)';
             xAndYValue = {x:0, y:1};
             break;
         case "ArrowRight":

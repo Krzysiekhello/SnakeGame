@@ -5,15 +5,26 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <title>Snake Game</title>
 </head>
 <body>
-<div id="gameContainer">
-    <div id="gameScore">
-        <p data-time="time">Time:<span></span></p>
-        <p data-score="score">Score:<span>0</span></p>
+    <div id="gameContainer">
+        <div data-gameScore="gameScore" id="gameScore">
+            <p data-time="time">Time:<span>0</span></p>
+            <p data-score="score">Points:<span>0</span></p>
+        </div>
+        <div data-resultTable="resultTable" id="resultTable">
+            <p>Final Score</p>
+            <div>
+                <p data-resultTableTime="resultTableTime">Time:<span>0</span></p>
+                <p data-resultTableScore="resultTableScore">Points:<span>0</span></p>
+            </div>
+            <button>Restart game</button>
+        </div>
+        <div data-gameField="gameField" id="gameField"></div>
     </div>
-    <div data-gameField="gameField" id="gameField"></div>
-</div>
 </body>
 </html>
